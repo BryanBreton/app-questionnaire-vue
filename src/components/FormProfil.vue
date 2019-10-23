@@ -6,31 +6,30 @@
         id="input-group-1"
         label="Email address:"
         label-for="input-1"
-        description="We'll never share your email with anyone else."
+        description="C'est confidentiel."
       >
         <b-form-input
           id="input-1"
           v-model="form.email"
           type="email"
           required
-          placeholder="Enter email"
+          placeholder="Entrez votre email"
         ></b-form-input>
       </b-form-group>
 
-      <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
-        <b-form-input id="input-2" v-model="form.name" required placeholder="Enter name"></b-form-input>
+      <b-form-group id="input-group-2" label="Votre Nom:" label-for="input-2">
+        <b-form-input id="input-2" v-model="form.nom" required placeholder="Entrez votre nom"></b-form-input>
       </b-form-group>
 
-      <b-form-group id="input-group-3" label="Food:" label-for="input-3">
-        <b-form-select id="input-3" v-model="form.food" :options="foods" required></b-form-select>
+      <b-form-group id="input-group-3" label="Votre Prénom:" label-for="input-3">
+        <b-form-input id="input-3" v-model="form.prenom" required placeholder="Entrez votre prenom"></b-form-input>
       </b-form-group>
 
-      <b-form-group id="input-group-4">
-        <b-form-checkbox-group v-model="form.checked" id="checkboxes-4">
-          <b-form-checkbox value="me">Check me out</b-form-checkbox>
-          <b-form-checkbox value="that">Check that out</b-form-checkbox>
-        </b-form-checkbox-group>
+      <b-form-group id="input-group-4" label="Food:" label-for="input-4">
+        <b-form-select id="input-4" v-model="form.food" :options="foods" required></b-form-select>
       </b-form-group>
+
+     
 
       <b-button type="submit" variant="primary">Submit</b-button>
       <b-button type="reset" variant="danger">Reset</b-button>
@@ -41,6 +40,7 @@
     </b-card>
   </div>
 </template>
+	<script src="https://cdn.jsdelivr.net/npm/pouchdb@7.0.0/dist/pouchdb.min.js"></script>
 
 <script>
 export default {
@@ -53,11 +53,11 @@ export default {
         checked: []
       },
       foods: [
-        { text: "Select One", value: null },
-        "Carrots",
-        "Beans",
-        "Tomatoes",
-        "Corn"
+        { text: "Votre Origine", value: null },
+        "Anglais",
+        "Espagnol",
+        "Portugais",
+        "Français"
       ],
       show: true
     };
@@ -65,7 +65,19 @@ export default {
   methods: {
     onSubmit(evt) {
       evt.preventDefault();
-      alert(JSON.stringify(this.form));
+      var jsonprenom=JSON.stringify(this.form.prenom);
+      var jsonnom=JSON.stringify(this.form.nom);
+      var db = new PouchDB('_test');
+
+	db.put({
+		_id: 'daniel@gmail.com',
+		nom: jsonprenom, 
+        prenom: jsonnom
+    });
+    	db.replicate.to('http://127.0.0.1:5984/_test');
+
+      alert(JSON.parse(jsonprenom) + JSON.parse(jsonnom) + " ajouté a la BDD");
+
     },
     onReset(evt) {
       evt.preventDefault();
