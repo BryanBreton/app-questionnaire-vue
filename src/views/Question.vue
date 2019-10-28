@@ -1,6 +1,6 @@
 <template>
 
-<div class="home">
+<div>
      
     <h1>Des questions vont vous être posées</h1>
     
@@ -11,7 +11,6 @@
 
 import questions from '../../question.json'
 import Reponses from '@/components/Reponses.vue'
-console.log(questions)
 export default {
     
     name: 'question',

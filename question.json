@@ -2,17 +2,25 @@
     "questions": [
         {
             "enoncee": "Si un taxi roule a 30 km/h et fais un trajet de 7h23, quelle est la masse de la statue de la liberté ?",
-            "reponsea": "C'est la mer noir",
-            "reponseb": "Effectivement",
-            "reponsec": "225 tonnes",
-            "reponsed": "la reponse d" 
+            "reponses":[
+                
+                    "C'est la mer noir", "Effectivement", "225 tonnes", "la reponse d"
+
+                
+            ],
+            "bonnereponses":[
+                "C'est la mer noir", "Effectivement"
+            ]
+            
         },
         {
             "enoncee": "Si 1+1=3, combien fait la taille de la terre au centieme pres?",
-            "reponsea": "42",
-            "reponseb": "21",
-            "reponsec": "100055458461",
-            "reponsed": "la reponse d" 
+            "reponses":[
+            "42", "21", "15555", "la reponse d"
+            ],
+            "bonnereponses":[
+                "15555"
+            ]
         }
     
     ]
