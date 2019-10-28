@@ -44,6 +44,7 @@
 
 <script>
 import PouchDB from "pouchdb"
+
 export default {
   data() {
     return {
@@ -64,22 +65,22 @@ export default {
     };
   },
   methods: {
-    onSubmit(evt) {
+  onSubmit(evt) {
       evt.preventDefault();
       var jsonprenom=JSON.stringify(this.form.prenom);
       var jsonnom=JSON.stringify(this.form.nom);
       var db = new PouchDB('_test');
 
-	db.put({
-		_id: 'daniel@gmail.com',
-		nom: jsonprenom, 
-    prenom: jsonnom
-    });
-    	db.replicate.to('http://127.0.0.1:5984/_test');
+    db.put({
+      _id: 'danial@gmail.com',
+      nom: jsonprenom, 
+      prenom: jsonnom
+      });
+        db.replicate.to('http://127.0.0.1:5984/_test');
 
-      alert(JSON.parse(jsonprenom) + JSON.parse(jsonnom) + " ajouté a la BDD");
-
-    },
+        alert(JSON.parse(jsonprenom) + JSON.parse(jsonnom) + " ajouté a la BDD");
+        this.$router.push({name: "question"})
+  },
     onReset(evt) {
       evt.preventDefault();
       // Reset our form values
