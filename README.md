@@ -22,3 +22,8 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+#Objectif
+#Instancier la bdd
+#Comprendre la nav 
+#Repondre a une question

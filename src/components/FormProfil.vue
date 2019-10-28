@@ -43,6 +43,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/pouchdb@7.0.0/dist/pouchdb.min.js"></script>
 
 <script>
+import PouchDB from "pouchdb"
 export default {
   data() {
     return {
@@ -72,7 +73,7 @@ export default {
 	db.put({
 		_id: 'daniel@gmail.com',
 		nom: jsonprenom, 
-        prenom: jsonnom
+    prenom: jsonnom
     });
     	db.replicate.to('http://127.0.0.1:5984/_test');
 
