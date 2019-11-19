@@ -7,8 +7,7 @@
         <b-form-checkbox v-model="bb_checkedboxes" v-bind:value="bb_reponse">{{bb_reponse}}</b-form-checkbox> <!-- ces reponses sont dans des checkbox -->
     </div>
     <input type="submit" value="ok" variant="primary"/>
-    <span>Noms cochés : {{ bb_checkedboxes }}</span>
-    <span >Noms a cocher : {{ bb_tocheck }}</span>
+    
 </b-form>
 </div>  
 </template>
