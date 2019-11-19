@@ -4,24 +4,24 @@
      
     <h1>Des questions vont vous être posées</h1>
     
-     <Reponses v-bind:questionslist="oui"/>
+     <bb_Reponses v-bind:bb_questionslist="bb_oui"/> <!-- Ici il y aura le component Reponses -->
     </div> 
 </template>
 <script>
 
-import questions from '../../question.json'
-import Reponses from '@/components/Reponses.vue'
+import bb_questions from '../../question.json'
+import bb_Reponses from '@/components/Reponses.vue'
 export default {
     
     name: 'question',
    
     
     components: {
-        Reponses
+        bb_Reponses
     },
      data () {
      return {
-       oui: questions
+       bb_oui: bb_questions //question est la donnee qui a ete envoye depuis le json
      }
     }
 }

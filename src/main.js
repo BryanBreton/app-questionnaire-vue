@@ -10,6 +10,12 @@ Vue.use(BootstrapVue)
 Vue.config.productionTip = false
 
 new Vue({
+  data(){
+    return {
+      bb_score: Number
+    }
+  },
+
   router,
   render: h => h(App)
 }).$mount('#app')

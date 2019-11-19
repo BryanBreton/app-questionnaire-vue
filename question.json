@@ -21,6 +21,51 @@
             "bonnereponses":[
                 "15555"
             ]
+        },
+        {
+            "enoncee": "De quel couleur est le drapeau de la France",
+            "reponses":[
+            "bleu blanc et rouge", "noir et vert", "rouge", "la reponse d"
+            ],
+            "bonnereponses":[
+                "bleu blanc et rouge"
+            ]
+        },
+        {
+            "enoncee": "Quand une porte est fermée, elle n'est pas ..",
+            "reponses":[
+            "Ouverte", "Blanche"
+            ],
+            "bonnereponses":[
+                "Ouverte"
+            ]
+        },
+        {
+            "enoncee": "Quand on se rase les cheveux on est ..",
+            "reponses":[
+            "chauve", "mort", "cheveulu", "la reponse d"
+            ],
+            "bonnereponses":[
+                "chauve"
+            ]
+        },
+        {
+            "enoncee": "Qui est le frere de Gims?",
+            "reponses":[
+            "Orelsan", "Wu Tan Li", "Dadju", "la reponse d"
+            ],
+            "bonnereponses":[
+                "Dadju"
+            ]
+        },
+        {
+            "enoncee": "Qu'est ce qui est plus grand que 6?",
+            "reponses":[
+            "8", "5", "9", "la reponse d"
+            ],
+            "bonnereponses":[
+                "8", "9"
+            ]
         }
     
     ]
